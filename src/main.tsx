@@ -5,10 +5,16 @@ import { RouterProvider } from 'react-router/dom';
 
 import './index.css';
 
+import Tour from './routes/tour';
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <div>Hello World</div>,
+  },
+  {
+    path: '/tour/:tourId',
+    element: <Tour />,
   },
 ]);
 
