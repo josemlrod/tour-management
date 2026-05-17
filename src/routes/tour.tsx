@@ -3,6 +3,15 @@ import { Star, Users, Clock, Check } from 'lucide-react';
 import { Stepper } from '../../components/stepper.tsx';
 import { tours } from '../../lib/mock-data.ts';
 
+/**
+ * Renders the tour details page for the mock "Food" tour.
+ *
+ * This component selects the food tour from the mock data (tours[3]) and renders its
+ * header, metadata (rating, duration, capacity), image, meeting point, inclusions,
+ * highlights, and a Stepper configured with the tour's start times, price, max guests, and name.
+ *
+ * @returns The React element for the tour details page.
+ */
 export default function Tour() {
   const tour = tours[3]; // Food tour
 

@@ -20,6 +20,15 @@ const dates = Array.from({ length: 14 }).map((_, i) => {
 
 const steps = ['Date', 'Party', 'Details', 'Confirm'] as const;
 
+/**
+ * Render a four-step booking stepper for selecting a date, time slot, guest count, attendee details, and confirming the booking.
+ *
+ * @param tourStartTimes - Available time slots for the tour.
+ * @param tourPrice - Price per guest used to compute the displayed total.
+ * @param tourMaxGuests - Maximum number of guests allowed per booking.
+ * @param tourName - Display name of the tour shown on the confirmation step.
+ * @returns The React element that renders the interactive booking stepper UI.
+ */
 export function Stepper({
   tourStartTimes,
   tourPrice,
