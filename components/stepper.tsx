@@ -50,7 +50,7 @@ export function Stepper({
                       initial={false}
                       animate={{ width: active || done ? '100%' : '0%' }}
                       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                      className='absolute inset-y-0 left-0 bg-[#0A0A0A]'
+                      className='absolute inset-y-0 left-0 bg-primary'
                     />
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export function Stepper({
                         onClick={() => setDate(d.iso)}
                         className={`flex flex-col items-center gap-0.5 rounded-md border px-2 py-2 text-xs transition-all ${
                           active
-                            ? 'border-[#0A0A0A] bg-[#0A0A0A] text-white'
+                            ? 'border-primary bg-primary text-primary-foreground'
                             : 'border-stone-200 hover:border-stone-400'
                         }`}
                       >
@@ -106,7 +106,7 @@ export function Stepper({
                         onClick={() => setTime(t)}
                         className={`rounded-full border px-3 py-1.5 text-xs transition-all ${
                           t === time
-                            ? 'border-[#0A0A0A] bg-[#0A0A0A] text-white'
+                            ? 'border-primary bg-primary text-primary-foreground'
                             : 'border-stone-200 hover:border-stone-400'
                         }`}
                       >
@@ -134,7 +134,7 @@ export function Stepper({
                         onClick={() => setGuests(n)}
                         className={`rounded-md border py-3 text-lg font-medium transition-all ${
                           active
-                            ? 'border-[#0A0A0A] bg-[#0A0A0A] text-white'
+                            ? 'border-primary bg-primary text-primary-foreground'
                             : 'border-stone-200 hover:border-stone-400'
                         }`}
                       >
@@ -164,7 +164,7 @@ export function Stepper({
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder='Alex Rivera'
-                    className='mt-1.5 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm outline-none transition-colors focus:border-[#0A0A0A]'
+                    className='mt-1.5 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm outline-none transition-colors focus:border-primary'
                   />
                 </div>
                 <div>
@@ -176,7 +176,7 @@ export function Stepper({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder='alex@example.com'
-                    className='mt-1.5 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm outline-none transition-colors focus:border-[#0A0A0A]'
+                    className='mt-1.5 w-full rounded-md border border-stone-200 bg-white px-3 py-2 text-sm outline-none transition-colors focus:border-primary'
                   />
                 </div>
                 <div>
@@ -186,7 +186,7 @@ export function Stepper({
                   <textarea
                     rows={2}
                     placeholder='Vegetarian, allergies, etc.'
-                    className='mt-1.5 w-full resize-none rounded-md border border-stone-200 bg-white px-3 py-2 text-sm outline-none transition-colors focus:border-[#0A0A0A]'
+                    className='mt-1.5 w-full resize-none rounded-md border border-stone-200 bg-white px-3 py-2 text-sm outline-none transition-colors focus:border-primary'
                   />
                 </div>
               </div>
@@ -199,9 +199,9 @@ export function Stepper({
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ type: 'spring', stiffness: 200, damping: 14 }}
-                    className='mx-auto flex size-12 items-center justify-center rounded-full bg-[#D97757]/15'
+                    className='mx-auto flex size-12 items-center justify-center rounded-full bg-accent/15'
                   >
-                    <Check className='size-5 text-[#D97757]' />
+                    <Check className='size-5 text-accent' />
                   </motion.div>
                   <p className='mt-3 text-base font-medium'>Ready to confirm</p>
                   <p className='mt-1 text-xs text-stone-500'>
@@ -264,7 +264,7 @@ export function Stepper({
             <button
               onClick={() => setStep(Math.min(steps.length - 1, step + 1))}
               disabled={step === steps.length - 1}
-              className='group inline-flex items-center gap-1.5 rounded-md bg-[#0A0A0A] px-4 py-2 text-xs font-medium text-white transition-all hover:bg-stone-800 disabled:cursor-not-allowed disabled:bg-[#D97757]'
+              className='group inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-all hover:bg-primary/80 disabled:cursor-not-allowed disabled:bg-accent disabled:text-accent-foreground'
             >
               {step === steps.length - 1 ? 'Booking confirmed' : 'Continue'}
             </button>
